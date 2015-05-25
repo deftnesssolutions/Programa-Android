@@ -1,14 +1,111 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
     tools:context=".MainActivity" >
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="164dp"
+        android:orientation="vertical" >
+           
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shapetexview"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dip"
+            android:textColor="#000000"
+            android:inputType="phone"
+			android:digits="1234567890"
+            android:textSize="17dp">
+            	 <requestFocus />
+   		</EditText>
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shapebutton"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:shadowColor="#FF8800"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:text="Acessar"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+       
+        <TextView
+            android:id="@+id/lblResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|right"
+        android:layout_marginBottom="1dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal" >
+        
+        <Button
+        	android:id="@+id/btnVerificarIP"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        
+        	android:layout_marginLeft="200dp"
+       	 	android:background="@drawable/shapebutton"
+        	android:paddingLeft="20dip"
+        	android:paddingRight="20dip"
+        	android:shadowColor="#FF8800"
+        	android:shadowDx="1"
+        	android:shadowDy="2"
+        	android:shadowRadius="1.5"
+        	android:text="Verificar ou Alterar IP"
+        	android:textColor="#FFFFFF"
+        	android:textSize="18dp"
+        	android:textStyle="bold"
+        	android:typeface="serif" />
+         
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapebutton"
+          
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:shadowColor="#FF8800"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:text="Sair"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        
+     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world" />
-
-</RelativeLayout>
+</LinearLayout>
