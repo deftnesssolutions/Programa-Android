@@ -205,7 +205,8 @@ import android.widget.Toast;
     }
     
     //Abre la tele principal de login de vendedores
-    @TargetApi(Build.VERSION_CODES.GINGERBREAD) @SuppressLint("NewApi") public void chamaMain()
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD) @SuppressLint("NewApi")
+    public void chamaMain()
     {
     	setContentView(R.layout.activity_main);
     	btnIngresar=(Button)findViewById(R.id.btnIngresar);
