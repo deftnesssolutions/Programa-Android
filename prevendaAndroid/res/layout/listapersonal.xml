@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.creativeprevenda.CheckedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llconsumo"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/selector_filas"
+        android:orientation="horizontal" >
+   		
+    	<TextView
+    	    android:id="@+id/txtOrdem"
+    	    android:layout_width="30dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="5dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Nro" >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtCod"
+    	    
+    	    android:layout_width="80dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="2dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Código" >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtDescricao"
+    	    
+    	    android:layout_width="360dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="2dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Descricão" >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtQuantidade"
+    	    
+    	    android:layout_width="50dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="2dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Quant." >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtUnitario"
+    	    android:layout_width="50dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="10dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Unit." >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtTotal"
+    	    
+    	    android:layout_width="60dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="4dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Total" >
+    	</TextView>
+    	
+    	<TextView
+    	    android:id="@+id/txtSituacao"
+    	    
+    	    android:layout_width="100dp"
+    	    android:layout_height="wrap_content"
+    	    android:layout_marginLeft="2dp"
+    	    android:textSize="15sp"
+            android:textStyle="bold"
+    	    android:text="Situação" >
+    	</TextView>
+    	
+	</com.example.creativeprevenda.CheckedLinearLayout>

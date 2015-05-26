@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/base_padron_azul"
+    xmlns:android="http://schemas.android.com/apk/res/android">   
+     	<LinearLayout
+    		android:layout_height="wrap_content"
+    		android:layout_width="fill_parent"
+   			android:orientation="horizontal"
+    		android:background="@drawable/base_padron_azul"> 
+        	<EditText 
+     			android:id="@+id/etProcurar"
+     			android:layout_width="wrap_content" 
+     			android:layout_weight="2"
+     			android:layout_height="wrap_content" 
+     			android:drawableRight="@drawable/search"  
+     			android:hint="Insira o nome do produto para pesquisar"
+            	android:inputType="textVisiblePassword"> 
+     		 <requestFocus />
+   			</EditText>
+   			<ImageButton
+        		android:id="@+id/imgVoltar"
+       			android:layout_width="wrap_content"
+       			android:layout_height="wrap_content"
+        		android:layout_marginLeft="20dp"
+        		android:src="@drawable/revert" />
+   		</LinearLayout>
+  
+        <ListView
+            android:id="@+id/lvProduto"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent">
+        </ListView>
+        <!-- List View de elementos  
+        <ImageButton
+        android:id="@+id/imgVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/revert" />
+        -->
+        
+</LinearLayout>

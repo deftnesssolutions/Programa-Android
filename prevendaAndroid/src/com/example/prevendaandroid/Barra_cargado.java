@@ -21,7 +21,7 @@ import android.widget.TextView;
  	en segundo plano y exibe en pantalla un progressbar, en este caso un circular...
  	Buendo qualquier programador que llegue hasta aqui analizando las lineas de codigo va entender lo que esta pasando
  	
- 	Esta tela o pantalla se encarga tambien de pasar algunos datos al pantalla principal 
+ 	Esta tela o pantalla se encarga de accionar y de pasar algunos datos al pantalla menu_principal 
  	tales como el id, el nombre del vendedor y el ip del servidor
  	Para que esta tela funcione debe existir en la caperta layout un xml llamado barra_cargado, en la carpeta menu un xml llamado barra_cargado
  	y en la carpe values en el xml llamado string la linea <string name="title_activity_barra_cargado">Barra_cargado</string>,
