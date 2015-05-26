@@ -1,6 +1,5 @@
 package com.example.prevendaandroid;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import org.apache.http.HttpResponse;
@@ -87,8 +86,8 @@ public class Menu_principal extends Activity implements OnClickListener
 	public static boolean resdialog = false;
 	java.util.Date noteTS ; 
 	private static String[] lstProdutos;
-    @SuppressWarnings("unused")
-	private static ArrayList<String> lstProdutos_Encontrados = new ArrayList<String>();
+    //@SuppressWarnings("unused")
+	//private static ArrayList<String> lstProdutos_Encontrados = new ArrayList<String>();
     public static ArrayAdapter<String> adapterProduto;
     public String[] mesaOcupadas;
     
@@ -96,8 +95,7 @@ public class Menu_principal extends Activity implements OnClickListener
 	EditText etNro,etQuant;
 	Boton[] bot;
 	TextView tvCartao,tvVendedor,tvData,tvDescricao,tvtotal,tvItem,tvDesc,tvCliente;
-	Button btnCartao,btnConsumo,btnSair,btnRetornar,btnIngresar,btnEnter,btnConfirmar, btnCancelar,btnClose,
-		   btnCancelConsumo,btnSumar,btnRestar, btnOk, btnCancel;
+	Button btnCartao,btnConsumo,btnSair,btnRetornar,btnIngresar,btnEnter,btnConfirmar, btnCancelar,btnClose, btnCancelConsumo,btnSumar,btnRestar, btnOk, btnCancel;
 	EditText txtCodigo, etProduto,etAdicionar,etRemover,etProcurar,etNomeCliente;
 	ListView lvProduto;
 	ImageButton imgVoltar;
@@ -376,7 +374,6 @@ public class Menu_principal extends Activity implements OnClickListener
 			return item;
 		}
 	}
-	
 	//## FIN CLASES INTERNA
 	
 	//###METODO PROTEGIDO QUE SE ENCARGA DE ACCIONAR Y MOSTRAL LA PANTALLA 
@@ -868,8 +865,6 @@ public class Menu_principal extends Activity implements OnClickListener
 
 		    t.start(); 
 	}
-	
-	
 	/*
 	* O sistema pega a data e formata automaticamente para o formato
 	* do banco de dados. E retorna a formatação.

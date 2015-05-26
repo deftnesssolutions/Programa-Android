@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.mspantanal.CheckedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.creativeprevenda.CheckedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/llconsumo"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -21,4 +21,4 @@
             android:textAppearance="@android:style/TextAppearance.Small"
             android:textColor="#FFC3C3C3"/>
  
-</com.example.mspantanal.CheckedLinearLayout>
+</com.example.creativeprevenda.CheckedLinearLayout>
