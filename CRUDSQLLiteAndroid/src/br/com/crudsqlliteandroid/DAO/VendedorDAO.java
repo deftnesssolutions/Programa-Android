@@ -58,21 +58,21 @@ public class VendedorDAO {
 	    }
 	 
 	    public List<VendedorVO> Consultar() {
-	        List<VendedorVO> lstAgenda = new ArrayList<VendedorVO>();
+	        List<VendedorVO> lstVendedor = new ArrayList<VendedorVO>();
 	 
 	        //Consulta para trazer todos os dados da tabela vendedor ordenados pela coluna Nome
 	        Cursor cursor = database.query(BaseDAO.TBL_VENDEDOR, colunas, 
-	                null, null, null, null, BaseDAO.VENDEDOR_NOME);
+	                null, null, null, null, BaseDAO.VENDEDOR_ID);
 	        cursor.moveToFirst();
 	        while (!cursor.isAfterLast()) {
 	        	VendedorVO lContatoVO = cursorToVendedor(cursor);
-	            lstAgenda.add(lContatoVO);
+	        	lstVendedor.add(lContatoVO);
 	            cursor.moveToNext();
 	        }
 	         
 	        //Tenha certeza que você fechou o cursor
 	        cursor.close();
-	        return lstAgenda;
+	        return lstVendedor;
 	    }
 	 
 	    //Converter o Cursor de dados no objeto POJO VendedorVO

@@ -36,8 +36,8 @@ public class VendedorUI extends ListActivity {
         lVendeDAO.open();
       //Criação dos objetos da Activity
         txtNome = (EditText)findViewById(R.id.edtNome); 
-       llenarLista();
        txtNome.requestFocus();
+       llenarLista();
                    
     }
     
@@ -74,10 +74,15 @@ public class VendedorUI extends ListActivity {
     //##Metodo para preencher a lista
     public void llenarLista()
     {
-    	 lstVendedores =lVendeDAO.Consultar();
-         adapter=new VendedorAdapter(this, lstVendedores);
-         setListAdapter(adapter);
-         registerForContextMenu(getListView());
+    	try {
+    		lstVendedores =lVendeDAO.Consultar();
+            adapter=new VendedorAdapter(this, lstVendedores);
+            setListAdapter(adapter);
+            registerForContextMenu(getListView());
+		} catch (Exception e) {
+			trace("Erro : " + e.getMessage());
+		}
+    	 
     }
     
     //##Click do boton Confirmar 

@@ -16,8 +16,8 @@ public static final String ESTOQUE_ID = "_id";
 public static final String ESTOQUE_DESCRICAO = "descricao";
 public static final String ESTOQUE_PRECO = "preco";
 public static final String ESTOQUE_UNIDADE = "unidade";
-public static final String ESTOQUE_REQUERPRODUCAO = "requerproducao";
-public static final String ESTOQUE_PERMITEALTERAR = "permitealterar";
+public static final String ESTOQUE_REQPRODUCAO = "reqproducao";
+public static final String ESTOQUE_PERALTERAR = "peralterar";
 public static final String ESTOQUE_CODIGOBARRA = "codigobarra";
 
 public static final String TBL_PREVENDA = "prevenda";
@@ -29,7 +29,7 @@ public static final String PREVENDA_NOMECLIENTE = "nomecliente";
 
 public static final String TBL_PREVENDADETALHE = "prevendadetalhe";
 public static final String PREVENDADETALHE_PREVENDAID = "prevendaid";
-public static final String PREVENDADETALHE_PRODUTOORDEM = "produtoordem";
+public static final String PREVENDADETALHE_PRODORDEM = "prodordem";
 public static final String PREVENDADETALHE_PRODUTOID = "produtoid";
 public static final String PREVENDADETALHE_QUANTIDADE = "quantidade";
 public static final String PREVENDADETALHE_UNITARIO = "unitario";
@@ -41,7 +41,7 @@ public static final String PREVENDADETALHE_ATENDENTE = "atendente";
 public static final String TBL_DETALHECOMPLEMENTO = "detalhecomplemento";
 public static final String DETALHECOMPLEMENTO_LINHAID = "linhaid";
 public static final String DETALHECOMPLEMENTO_DETALHETIPO = "detalhetipo";
-public static final String DETALHECOMPLEMENTO_DETALHEDESCRICAO = "detalhedescricao";
+public static final String DETALHECOMPLEMENTO_DETDESCRICAO = "detdescricao";
 
 private static final String DATABASE_NAME = "prevenda.db";
 private static final int DATABASE_VERSION = 1;
@@ -57,8 +57,8 @@ private static final String CREATE_ESTOQUE = "create table " +
 					   ESTOQUE_DESCRICAO      + " text not null, " +
 					   ESTOQUE_PRECO          + " real not null, " +
 					   ESTOQUE_UNIDADE        + " text not null, " +
-					   ESTOQUE_REQUERPRODUCAO + " text not null, " +
-					   ESTOQUE_PERMITEALTERAR + " text not null, " +
+					   ESTOQUE_REQPRODUCAO + " text not null, " +
+					   ESTOQUE_PERALTERAR + " text not null, " +
 					   ESTOQUE_CODIGOBARRA    + " text not null);";
 
 //Estrutura da tabela Prevenda (sql statement)
@@ -71,21 +71,21 @@ private static final String CREATE_PREVENDA = "create table " +
 
 //Estrutura da tabela PrevendaDetalhe (sql statement)
 private static final String CREATE_PREVENDADETALHE = "create table " +
-  TBL_PREVENDADETALHE + "( " + PREVENDADETALHE_PREVENDAID   + " integer not null " + 
-							   PREVENDADETALHE_PRODUTOORDEM + " integer not null, " +
+  TBL_PREVENDADETALHE + "( " + PREVENDADETALHE_PREVENDAID   + " integer not null, " + 
+							   PREVENDADETALHE_PRODORDEM + " integer not null, " +
 							   PREVENDADETALHE_PRODUTOID    + " integer not null, " +
 							   PREVENDADETALHE_QUANTIDADE   + " real not null, " +
 							   PREVENDADETALHE_UNITARIO     + " real not null, " +
 							   PREVENDADETALHE_SITUACAO     + " text not null, " +
 							   PREVENDADETALHE_BARRA        + " text not null, " +
-							   PREVENDADETALHE_LINHAID      + " integer autoincrement, " +
+							   PREVENDADETALHE_LINHAID      + " integer primary key autoincrement, " +
 							   PREVENDADETALHE_ATENDENTE    + " integer not null);";
 
 //Estrutura da tabela DetalheComplemento (sql statement)
 private static final String CREATE_DETALHECOMPLEMENTO = "create table " +
   TBL_DETALHECOMPLEMENTO + "( " + DETALHECOMPLEMENTO_LINHAID       + " integer not null, " + 
   								  DETALHECOMPLEMENTO_DETALHETIPO        + " text not null, " +
-  								  DETALHECOMPLEMENTO_DETALHEDESCRICAO + " text not null);";
+  								  DETALHECOMPLEMENTO_DETDESCRICAO + " text not null);";
 
 public BaseDAO(Context context) {
     super(context, DATABASE_NAME, null, DATABASE_VERSION);
