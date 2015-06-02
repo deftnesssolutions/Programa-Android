@@ -37,15 +37,26 @@ public final class R {
         public static final int shapetexview=0x7f020017;
     }
     public static final class id {
+        public static final int btnCancelar=0x7f070009;
+        public static final int btnConfirmar=0x7f070008;
         public static final int btnExit=0x7f070004;
         public static final int btnPrevenda=0x7f070001;
         public static final int btnProduto=0x7f070003;
         public static final int btnVendedor=0x7f070002;
+        public static final int btnVoltar=0x7f07000a;
+        public static final int edtNome=0x7f070006;
         public static final int linearLayout2=0x7f070000;
-        public static final int menu_settings=0x7f070005;
+        public static final int llconsumo=0x7f07000b;
+        public static final int menu_settings=0x7f07000e;
+        public static final int rellay=0x7f070007;
+        public static final int txtAux1=0x7f070005;
+        public static final int txtIdV=0x7f07000c;
+        public static final int txtNomeV=0x7f07000d;
     }
     public static final class layout {
         public static final int main=0x7f030000;
+        public static final int vendedor=0x7f030001;
+        public static final int vendedor_row=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f060000;
