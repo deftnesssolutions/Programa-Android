@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class Main extends Activity implements OnClickListener {
 
     EditText txtNome;
-	Button btnSair, btnVendedor,btnRegistrar,btnCancelar;
+	Button btnSair, btnVendedor,btnProduto,btnPrevenda;
 	public String msgb="Pressione o botão Sair para fechar o aplicativo";
 	
 	@Override
@@ -37,6 +37,10 @@ public class Main extends Activity implements OnClickListener {
 		{
 	        	registraVendedor();
 		}
+		if (v.getId() == R.id.btnProduto)
+		{
+	        	cadastroProduto();
+		}
 		if (v.getId()== id.btnExit)
 		{
 				System.exit(0);	
@@ -53,6 +57,18 @@ public class Main extends Activity implements OnClickListener {
             trace("Erro : " + e.getMessage());
         }  		
 	}
+	
+	//##Medoto para llamar a la tela de Cadastro de Produto
+		private void cadastroProduto() {
+			try
+	        {
+	            Intent it = new Intent(this, ProdutoUI.class);
+	            startActivity(it);//chama a tela e incusão
+	        }
+	        catch (Exception e) {
+	            trace("Erro : " + e.getMessage());
+	        }  		
+		}
 
     public void toast (String msg)
     {
@@ -68,6 +84,12 @@ public class Main extends Activity implements OnClickListener {
 	private void chamaPrincipal() {
 		setContentView(R.layout.main);
 		
+		btnVendedor = (Button)findViewById(R.id.btnVendedor);
+    	btnVendedor.setOnClickListener(this);
+		btnProduto = (Button)findViewById(R.id.btnProduto);
+    	btnProduto.setOnClickListener(this);
+		btnPrevenda = (Button)findViewById(R.id.btnPrevenda);
+    	btnPrevenda.setOnClickListener(this);  	
 		btnVendedor = (Button)findViewById(R.id.btnVendedor);
     	btnVendedor.setOnClickListener(this);
     	btnSair = (Button)findViewById(id.btnExit);

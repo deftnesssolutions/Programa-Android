@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".VendedorUI" android:label="@string/app_name"/>
+        <activity android:name=".ProdutoUI" android:label="@string/app_name"/>
     </application>
 
 </manifest>

@@ -5,6 +5,7 @@
   android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         android:id="@+id/txtAux1"
+        android:textColor="#ffffff"
         android:text="Nome :"
         android:gravity="right"
         android:width="70dip"
@@ -15,6 +16,7 @@
     </TextView>
     <EditText
         android:id="@+id/edtNome"
+        android:textColor="#ffffff"
         android:layout_marginLeft="5dip"
         android:text=""
         android:width="190dip"
