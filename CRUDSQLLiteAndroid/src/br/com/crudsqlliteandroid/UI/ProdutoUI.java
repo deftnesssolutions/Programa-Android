@@ -36,7 +36,7 @@ public class ProdutoUI extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        inicializar();      
-       //llenarLista();
+       llenarLista();
     }
     
   //##METODOS PUBLICOS 
