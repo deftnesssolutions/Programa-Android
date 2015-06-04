@@ -3,9 +3,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/fondo"
     android:orientation="vertical">
-   
-    
-
       <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -19,7 +16,7 @@
         <TextView
             android:id="@+id/tvId"
             android:layout_gravity="center_vertical"
-            android:layout_width="30dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:text="ID"
@@ -29,10 +26,11 @@
 
         <TextView
             android:id="@+id/tvDescricao" 
-            android:layout_gravity="center_vertical"          
-            android:layout_width="200dp"
+            android:layout_gravity="center_vertical"  
+            android:width="130dip"        
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="5dp"
             android:text="Descrição"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -41,7 +39,8 @@
         <TextView
             android:id="@+id/tvUnidade"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
+            android:width="50dip"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:text="Unid"
@@ -52,7 +51,8 @@
         <TextView
             android:id="@+id/tvPreco"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
+            android:width="50dip"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:text="Preço"
@@ -63,7 +63,8 @@
         <TextView
             android:id="@+id/tvCodBarra"
             android:layout_gravity="center_vertical"
-            android:layout_width="50dp"
+            android:width="50dip"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:text="Barra"
@@ -73,9 +74,9 @@
         
         <TextView
             android:id="@+id/tvRp"
-            
+            android:width="60dip"
             android:gravity="center"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
             android:text="Req. Produção"
@@ -85,12 +86,10 @@
 
         <TextView
             android:id="@+id/tvPa"
-            
-            android:gravity="left"
-            android:layout_width="50dp"
+            android:layout_marginBottom="1dp"
+            android:width="60dip"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="2dp"
             android:text="Perm. Alterar"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -112,7 +111,7 @@
         android:orientation="horizontal" >
 
 			<ListView
-			    android:id="@+id/lvProduto"
+			    android:id="@android:id/list"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
 			    android:layout_weight="1" >

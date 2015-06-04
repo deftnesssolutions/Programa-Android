@@ -1,6 +1,5 @@
 package br.com.crudsqlliteandroid.UI;
 
-import br.com.crudsqlliteandroid.UI.R.id;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import br.com.crudsqlliteandroid.UI.R.id;
 
 public class Main extends Activity implements OnClickListener {
 
@@ -33,11 +33,11 @@ public class Main extends Activity implements OnClickListener {
 	//escucha del evento click de los botones, gracias a que la clase implementa el onClickListener
 	public void onClick(View v) {
     	
-		if (v.getId() == R.id.btnVendedor)
+		if (v.getId() == id.btnVendedor)
 		{
 	        	registraVendedor();
 		}
-		if (v.getId() == R.id.btnProduto)
+		if (v.getId() == id.btnProduto)
 		{
 	        	cadastroProduto();
 		}
@@ -59,16 +59,16 @@ public class Main extends Activity implements OnClickListener {
 	}
 	
 	//##Medoto para llamar a la tela de Cadastro de Produto
-		private void cadastroProduto() {
-			try
-	        {
+	private void cadastroProduto() {
+		try
+		{
 	            Intent it = new Intent(this, ProdutoUI.class);
 	            startActivity(it);//chama a tela e incusão
-	        }
-	        catch (Exception e) {
-	            trace("Erro : " + e.getMessage());
-	        }  		
-		}
+	    }
+	    catch (Exception e) {
+	       trace("Erro : " + e.getMessage());
+	    }  		
+	}
 
     public void toast (String msg)
     {

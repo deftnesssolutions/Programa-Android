@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -28,7 +27,6 @@ public class ProdutoUI extends ListActivity {
 	List<ProdutoVO> lstProdutos;  //lista de contatos cadastrados no BD
     ProdutoAdapter adapter;   //Adapter responsável por apresentar os contatos na tela
     ProdutoVO lProdutoVO; 
-    EditText txtId,txtDescricao,txtUnidade,txtPreco,txtReqProducao,txtPerAlterar,txtCodBarra;
     boolean blnShort = false;
     int Posicao = 0;    //determinar a posição do contato dentro da lista lstContatos
     public String msgb="Pressione o botão Sair para voltar ao menu principal";
@@ -37,11 +35,8 @@ public class ProdutoUI extends ListActivity {
     
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-       inicializar();
-      
-       llenarLista();
-                   
+       inicializar();      
+       //llenarLista();
     }
     
   //##METODOS PUBLICOS 
@@ -57,15 +52,23 @@ public class ProdutoUI extends ListActivity {
     	setContentView(R.layout.produto);
         lProdutoDAO = new ProdutoDAO(this);
         lProdutoDAO.open();
-    	//Criação dos objetos da Activity
-        txtDescricao = (EditText)findViewById(R.id.txtDescricao);
-        txtUnidade = (EditText)findViewById(R.id.txtUnidade);
-        txtPreco = (EditText)findViewById(R.id.txtPreco);
-        txtReqProducao = (EditText)findViewById(R.id.txtReqProducao);
-        txtPerAlterar = (EditText)findViewById(R.id.txtPerAlterar);
-        txtCodBarra = (EditText)findViewById(R.id.txtCodBarra);
-        txtDescricao.requestFocus();
     }
+    
+  //##Metodo para preencher a lista
+    public void llenarLista()
+    {
+    	try {
+    		lstProdutos =lProdutoDAO.Consultar();
+            adapter=new ProdutoAdapter(this, lstProdutos);
+            setListAdapter(adapter);
+            registerForContextMenu(getListView());
+		} catch (Exception e) {
+			trace("Erro : " + e.getMessage());
+		}
+    	 
+    }
+    
+    /*
     //##Metodo para guardar registro novo ou update
     public void inserir()
     {
@@ -99,7 +102,7 @@ public class ProdutoUI extends ListActivity {
             trace("Erro : " + e.getMessage());
         }  
     }
-    
+    */
     public void chamaCadastro()
     {
     	setContentView(R.layout.cadastro_produto);	
@@ -116,20 +119,6 @@ public class ProdutoUI extends ListActivity {
         combo2.setAdapter(adp2);
     }
     
-    //##Metodo para preencher a lista
-    public void llenarLista()
-    {
-    	try {
-    		lstProdutos =lProdutoDAO.Consultar();
-            adapter=new ProdutoAdapter(this, lstProdutos);
-            setListAdapter(adapter);
-            registerForContextMenu(getListView());
-		} catch (Exception e) {
-			trace("Erro : " + e.getMessage());
-		}
-    	 
-    }
-    
     //##Click do boton Cadastrar 
     public void btnAdd_click(View view)
     {
@@ -141,7 +130,7 @@ public class ProdutoUI extends ListActivity {
     {
     	finish();
     }
-   /* 
+   
     //##Metodo que cria o menu popup
     @Override   
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {        
@@ -207,7 +196,7 @@ public class ProdutoUI extends ListActivity {
         Posicao = position;
         blnShort = true;
         this.openContextMenu(l);
-    }*/
+    }
     public void toast (String msg)
     {
         Toast.makeText (getApplicationContext(), msg, Toast.LENGTH_SHORT).show ();
