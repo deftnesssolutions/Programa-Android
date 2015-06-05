@@ -62,7 +62,7 @@ public class Main extends Activity implements OnClickListener {
 	private void cadastroProduto() {
 		try
 		{
-	            Intent it = new Intent(this, ProdutoUI.class);
+	            Intent it = new Intent(this, CadastroProduto.class);
 	            startActivity(it);//chama a tela e incusão
 	    }
 	    catch (Exception e) {

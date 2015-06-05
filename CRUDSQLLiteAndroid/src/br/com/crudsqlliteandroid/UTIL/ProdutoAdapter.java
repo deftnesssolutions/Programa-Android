@@ -89,7 +89,7 @@ public class ProdutoAdapter extends BaseAdapter  {
                 //ele sempre passará por aqui quando,por exemplo, for efetuado uma rolagem na tela 
                 holder = (ViewHolder) convertView.getTag();
             }
-            holder.tvId.setText((String.valueOf(produto.getId())));
+            holder.tvId.setText(String.valueOf(produto.getId()));
             holder.tvDescricao.setText(produto.getDescricao());
             holder.tvUnidade.setText(produto.getUnidade());
             holder.tvPreco.setText((String.valueOf(produto.getPreco())));

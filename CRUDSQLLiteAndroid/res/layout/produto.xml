@@ -134,7 +134,7 @@
 
         <Button
             android:id="@+id/btnAdd"
-            android:onClick="btnAdd_click"
+            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -154,7 +154,7 @@
 
         <Button
             android:id="@+id/btnVoltar"
-            android:onClick="btnVoltar_click"
+            android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"

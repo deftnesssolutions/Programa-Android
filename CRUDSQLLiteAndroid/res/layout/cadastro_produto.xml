@@ -69,51 +69,44 @@
     </EditText>
     <TextView
         android:id="@+id/txtAux7"
-        android:text="Req Produção :"
-        android:width="70dip"
+        android:text="Requer Produção :"
         android:gravity="right"
+        android:layout_marginLeft="50dip"
         android:layout_marginTop="10dip"
-        android:layout_centerVertical="@+id/txtAux2"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/edtPreco"
-        android:layout_alignParentLeft="true">
+        android:layout_below="@+id/edtPreco">
         
     </TextView>
     
    
-     <Spinner
+       <Spinner
         android:id="@+id/opciones"
-        android:layout_marginLeft="5dip"
+        android:layout_marginLeft="50dip"
         android:width="190dip"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/edtPreco"
-        android:layout_toRightOf="@+id/txtAux7"/>
+        android:layout_below="@+id/txtAux7"/>
     
      <TextView
         android:id="@+id/txtAux9"
         android:text="Permite Alterar :"
-        android:width="70dip"
+        android:layout_marginLeft="50dip"
         android:gravity="right"
         android:layout_marginTop="10dip"
-        android:layout_centerVertical="@+id/txtAux2"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/opciones"
-        android:layout_alignParentLeft="true">
-        
+        android:layout_below="@+id/opciones">
     </TextView>
-    
-   
-     <Spinner
+    <Spinner
         android:id="@+id/opciones2"
-        android:layout_marginLeft="5dip"
+        android:layout_marginLeft="50dip"
         android:width="190dip"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_below="@+id/opciones"
-        android:layout_toRightOf="@+id/txtAux9"/>
+        android:layout_below="@+id/txtAux9"/>
+   
+     
     
     <LinearLayout
         android:layout_width="fill_parent"
@@ -126,7 +119,7 @@
             android:layout_weight="1.0"
             android:id="@+id/btnSalvar"
             android:onClick="btnSalvar_click"
-            android:text="Cancelar"
+            android:text="Confirmar"
             android:typeface="serif"
             android:textStyle="bold"
             android:background="@drawable/shapebutton"
