@@ -63,6 +63,7 @@ public class ProdutoUI extends Activity {
            	txtDescricao = (EditText)findViewById(id.edtDescricao);
        		txtUnidade = (EditText)findViewById(id.edtUnidade);
        		txtPreco = (EditText)findViewById(id.edtPreco);
+       		txtCodBarra = (EditText)findViewById(id.edtBarra);
        		txtRp = (Spinner)findViewById(id.opciones);
        		txtPa = (Spinner)findViewById(id.opciones2);
        		
@@ -71,6 +72,7 @@ public class ProdutoUI extends Activity {
             //definido no arquivo main.xml
        		txtDescricao.setText(lProdutoVO.getDescricao());
        		txtUnidade.setText(lProdutoVO.getUnidade());
+       		txtCodBarra.setText(lProdutoVO.getCodbarra());
        		if(String.valueOf(lProdutoVO.getPreco())!="null")
        			txtPreco.setText( String.valueOf(lProdutoVO.getPreco()));
        		else
@@ -90,10 +92,6 @@ public class ProdutoUI extends Activity {
        }  
     }
    
-    public void spinner_click()
-    {
-    	
-    }
   //Click do boton Sair
     public void btnSalvar_click(View view)
     {
@@ -101,13 +99,12 @@ public class ProdutoUI extends Activity {
         {
             //Quando confirmar a inclusão ou alteração deve-se devolver
             //o registro com os dados preenchidos na tela e informar
-            //o RESULT_OK e em seguida finalizar a Activity
-             
-             
+            //o RESULT_OK e em seguida finalizar a Activity           
             Intent data = new Intent();
             lProdutoVO.setDescricao(txtDescricao.getText().toString());
             lProdutoVO.setUnidade(txtUnidade.getText().toString());
             lProdutoVO.setPreco(Double.valueOf(txtPreco.getText().toString()));
+            lProdutoVO.setCodbarra(txtCodBarra.getText().toString());
             lProdutoVO.setReqproducao(txtRp.getSelectedItem().toString());
             lProdutoVO.setPeralterar(txtPa.getSelectedItem().toString());
             data.putExtra("estoque", lProdutoVO);
@@ -122,8 +119,6 @@ public class ProdutoUI extends Activity {
     {
     	finish();
     }
-   
-   
     
     public void toast (String msg)
     {

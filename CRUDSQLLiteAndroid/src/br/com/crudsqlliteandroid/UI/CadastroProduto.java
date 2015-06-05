@@ -8,7 +8,6 @@ import br.com.crudsqlliteandroid.UI.R.array;
 import br.com.crudsqlliteandroid.UI.R.id;
 import br.com.crudsqlliteandroid.UI.R.layout;
 import br.com.crudsqlliteandroid.UTIL.ProdutoAdapter;
-import android.R;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -42,7 +41,7 @@ public class CadastroProduto extends ListActivity {
 	}
 	
 	//escucha del evento click de los botones, gracias a que la clase implementa el onClickListener
-		public void onClick(View v) {
+	public void onClick(View v) {
 	    	
 			if (v.getId() == id.btnAdd)
 			{
@@ -53,6 +52,7 @@ public class CadastroProduto extends ListActivity {
 					finish();	
 	        }		
 		}
+	
     public void chamaCadastro()
     {
     	try
@@ -107,7 +107,7 @@ public class CadastroProduto extends ListActivity {
 	                //o valor do requestCode foi definido na função startActivityForResult
 	                if (requestCode == INCLUIR)
 	                {
-	                    //verifica se digitou algo no nome do contato
+	                    //verifica se digitou algo na descrição do produto
 	                    if (!lProdutoVO.getDescricao().equals("")) 
 	                    {
 	                        //necessário abrir novamente o BD pois ele foi fechado no método onPause()
@@ -116,12 +116,12 @@ public class CadastroProduto extends ListActivity {
 	                        //insere o contato no Banco de Dados SQLite
 	                        lProdutoDAO.Inserir(lProdutoVO);
 	                         
-	                        //insere o contato na lista de contatos em memória
+	                        //insere o produto na lista de produtos em memória
 	                        lstProdutos.add(lProdutoVO);
 	                    }
 	                }else if (requestCode == ALTERAR){
 	                    lProdutoDAO.open();
-	                    //atualiza o contato no Banco de Dados SQLite
+	                    //atualiza o produto no Banco de Dados SQLite
 	                    lProdutoDAO.Alterar(lProdutoVO);
 	                     
 	                    //atualiza o contato na lista de contatos em memória
@@ -129,7 +129,8 @@ public class CadastroProduto extends ListActivity {
 	                }
 	                 
 	                //método responsável pela atualiza da lista de dados na tela
-	                adapter.notifyDataSetChanged();
+	                //adapter.notifyDataSetChanged();
+	                llenarLista();
 	            }
 	        }
 	        catch (Exception e) {
@@ -185,7 +186,7 @@ public class CadastroProduto extends ListActivity {
                  
                 Intent it = new Intent(this, ProdutoUI.class);
                 it.putExtra("tipo", ALTERAR);
-                it.putExtra("produto", lProdutoVO);
+                it.putExtra("estoque", lProdutoVO);
                 startActivityForResult(it, ALTERAR); //chama a tela de alteração
             }else if (menuItemIndex == 1){
                 //Excluir do Banco de Dados e da tela o registro selecionado
