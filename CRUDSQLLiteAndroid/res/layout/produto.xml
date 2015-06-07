@@ -27,8 +27,8 @@
         <TextView
             android:id="@+id/tvDescricao" 
             android:layout_weight="1"
-            android:layout_gravity="center_vertical"  
-            android:width="130dip"        
+            android:layout_gravity="center_vertical" 
+            android:width="460dip"        
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -40,10 +40,9 @@
         <TextView
             android:id="@+id/tvUnidade"
             android:layout_gravity="center_vertical"
-            android:width="50dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="0dp"
             android:text="Unid"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -51,11 +50,11 @@
 
         <TextView
             android:id="@+id/tvPreco"
+            
             android:layout_gravity="center_vertical"
-            android:width="50dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="15dp"
             android:text="Preço"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -63,11 +62,12 @@
 		
         <TextView
             android:id="@+id/tvCodBarra"
+            android:width="80dip"
+            android:gravity="center"
             android:layout_gravity="center_vertical"
-            android:width="50dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="5dp"
             android:text="Barra"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -75,11 +75,11 @@
         
         <TextView
             android:id="@+id/tvRp"
-            android:width="60dip"
             android:gravity="center"
+            android:width="60dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
+            android:layout_marginLeft="5dp"
             android:text="Req. Produção"
             android:textColor="#103200"
             android:textSize="12sp"
@@ -87,15 +87,17 @@
 
         <TextView
             android:id="@+id/tvPa"
-             
-            android:layout_gravity="right"
-            android:width="60dip"
-            android:layout_width="wrap_content"
+            android:layout_width="38dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="0dp"
+            android:gravity="right"
             android:text="Perm. Alterar"
             android:textColor="#103200"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:width="60dip" />
+
     </LinearLayout>
 
    

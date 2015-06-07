@@ -21,6 +21,8 @@ public class ProdutoUI extends Activity {
     private static final String[] opcion = new String[]{"Sim","Não"}; 
     ProdutoVO lProdutoVO;
     ArrayAdapter adp;
+    String lng;
+    
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastro_produto);
@@ -70,6 +72,7 @@ public class ProdutoUI extends Activity {
        		//Carregando os objetos com os dados do Contato
             //caso seja uma inclusão ele virá carregado com os atributos text
             //definido no arquivo main.xml
+       		
        		txtDescricao.setText(lProdutoVO.getDescricao());
        		txtUnidade.setText(lProdutoVO.getUnidade());
        		txtCodBarra.setText(lProdutoVO.getCodbarra());
@@ -99,7 +102,8 @@ public class ProdutoUI extends Activity {
         {
             //Quando confirmar a inclusão ou alteração deve-se devolver
             //o registro com os dados preenchidos na tela e informar
-            //o RESULT_OK e em seguida finalizar a Activity           
+            //o RESULT_OK e em seguida finalizar a Activity 
+    		//String.format("%1$-100s",txtDescricao.getText().toString())para preencher com espaco un string
             Intent data = new Intent();
             lProdutoVO.setDescricao(txtDescricao.getText().toString());
             lProdutoVO.setUnidade(txtUnidade.getText().toString());

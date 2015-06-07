@@ -11,7 +11,7 @@
     	    android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-    	    android:textSize="15sp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="ID" >
     	</TextView>
@@ -19,69 +19,67 @@
     	<TextView
     	    android:id="@+id/txtDescricao"
     	    android:layout_weight="1" 
-            android:width="160dip"        
+            android:width="360dip"        
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-    	    android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="Descricão" >
     	</TextView>
     	
     	<TextView
     	    android:id="@+id/txtUnidade"
-    	    android:width="50dip"
+    	    android:width="40dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-    	    android:textSize="15sp"
+            android:layout_marginLeft="2dp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="Unid." >
     	</TextView>
     	
     	<TextView
     	    android:id="@+id/txtPreco"
-    	    android:width="50dip"
+    	    android:width="40dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-    	    android:textSize="15sp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="Preço" >
     	</TextView>
     	
     	<TextView
     	    android:id="@+id/txtCodBarra"
-    	    android:width="50dip"
+    	    android:width="80dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="2dp"
-    	    android:textSize="15sp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="Barra" >
     	</TextView>
-    	
-    	
-    	
+    	   	
     	<TextView
     	    android:id="@+id/txtReqProducao"
-    	    android:width="60dip"
+    	    android:width="50dip"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="2dp"
-    	    android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="RP" >
     	</TextView>
     	
     	<TextView
     	    android:id="@+id/txtPerAlterar"
-    	    android:layout_gravity="right"
-            android:width="60dip"
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_gravity="right"          
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-    	    android:textSize="15sp"
+    	    android:textSize="12sp"
             android:textStyle="bold"
     	    android:text="PA" >
     	</TextView>
