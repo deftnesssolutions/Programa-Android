@@ -41,6 +41,10 @@ public class Main extends Activity implements OnClickListener {
 		{
 	        	cadastroProduto();
 		}
+		if(v.getId()==id.btnPrevenda)
+		{
+			acessoPrevenda();
+		}
 		if (v.getId()== id.btnExit)
 		{
 				System.exit(0);	
@@ -57,6 +61,18 @@ public class Main extends Activity implements OnClickListener {
             trace("Erro : " + e.getMessage());
         }  		
 	}
+	
+	//##Medoto para llamar a la tela de Acesso
+		private void acessoPrevenda() {
+			try
+	        {
+	            Intent it = new Intent(this, AcessoUI.class);
+	            startActivity(it);//chama a tela e incusão
+	        }
+	        catch (Exception e) {
+	            trace("Erro : " + e.getMessage());
+	        }  		
+		}
 	
 	//##Medoto para llamar a la tela de Cadastro de Produto
 	private void cadastroProduto() {

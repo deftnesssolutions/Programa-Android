@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView
+        android:id="@+id/txtAux9"
+        android:text="Insira seu Codigo :"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="right"
+        android:layout_marginLeft="50dip"
+        android:layout_marginTop="10dip"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/edtBarra">
+        
+    	</TextView>  
+        <EditText
+            android:id="@+id/txtCodigo"
+            android:maxLength="4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shapetexview"
+            android:paddingLeft="10dip"
+            android:layout_marginTop="10dp"
+            android:paddingRight="10dip"
+            android:textColor="#000000"
+            android:inputType="phone"
+			android:digits="1234567890"
+            android:textSize="17dp">
+            	 <requestFocus />
+   		</EditText>
+        
+       
+        <TextView
+            android:id="@+id/lblResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:shadowColor="#FFFFFF"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:typeface="monospace" />
+    </LinearLayout>
+     <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center_horizontal"
+        android:layout_marginBottom="1dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal" >
+         
+         <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shapebutton"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:shadowColor="#FF8800"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:text="Acessar"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shapebutton"
+          	android:layout_gravity="center_horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:shadowColor="#FF8800"
+            android:shadowDx="1"
+            android:shadowDy="2"
+            android:shadowRadius="1.5"
+            android:text="Sair"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+        
+     </LinearLayout>
+
+</LinearLayout>
