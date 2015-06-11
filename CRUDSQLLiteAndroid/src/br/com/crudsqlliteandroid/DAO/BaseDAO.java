@@ -91,7 +91,7 @@ public BaseDAO(Context context) {
     super(context, DATABASE_NAME, null, DATABASE_VERSION);
 }
 
-@Override
+
 public void onCreate(SQLiteDatabase database) {
     //Criação das tabelas
     database.execSQL(CREATE_VENDEDOR);
@@ -101,7 +101,6 @@ public void onCreate(SQLiteDatabase database) {
     database.execSQL(CREATE_DETALHECOMPLEMENTO);
 }
 
-@Override
 public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     //Caso seja necessário mudar a estrutura da tabela
     //deverá primeiro excluir a tabela e depois recriá-la

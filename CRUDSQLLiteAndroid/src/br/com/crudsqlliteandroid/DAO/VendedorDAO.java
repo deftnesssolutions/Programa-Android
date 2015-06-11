@@ -65,8 +65,8 @@ public class VendedorDAO {
 	                null, null, null, null, BaseDAO.VENDEDOR_ID);
 	        cursor.moveToFirst();
 	        while (!cursor.isAfterLast()) {
-	        	VendedorVO lContatoVO = cursorToVendedor(cursor);
-	        	lstVendedor.add(lContatoVO);
+	        	VendedorVO lVendedorVO = cursorToVendedor(cursor);
+	        	lstVendedor.add(lVendedorVO);
 	            cursor.moveToNext();
 	        }
 	         
@@ -75,23 +75,39 @@ public class VendedorDAO {
 	        return lstVendedor;
 	    }
 	    
-	    public List<VendedorVO> ConsultarId(int pValue) {
-	    	long id = pValue;
-	        List<VendedorVO> lstVendedor = new ArrayList<VendedorVO>();
-	 
+	   /* public List<VendedorVO> ConsultarId(String id) {
+	    	
+	    	String[] args = new String[]{id};
+	    	List<VendedorVO> lstVendedor = new ArrayList<VendedorVO>();
+	   	 
 	        //Consulta para trazer todos os dados da tabela vendedor ordenados pela coluna Nome
-	        Cursor cursor = database.query(BaseDAO.TBL_VENDEDOR, colunas, 
-	        		BaseDAO.VENDEDOR_ID + " = " + id, null, null, null, null);
-	        cursor.moveToFirst();
-	        while (!cursor.isAfterLast()) {
-	        	VendedorVO lContatoVO = cursorToVendedor(cursor);
-	        	lstVendedor.add(lContatoVO);
-	            cursor.moveToNext();
+	    	Cursor cursor = database.query(BaseDAO.TBL_VENDEDOR, colunas,BaseDAO.VENDEDOR_ID + "=?", args, null, null, null);
+	        
+	        if (cursor.getColumnCount()>0) {
+	        	cursor.moveToFirst();
+	        	VendedorVO lVendedorVO = cursorToVendedor(cursor);
+	        	lstVendedor.add(lVendedorVO);
 	        }
 	         
 	        //Tenha certeza que você fechou o cursor
 	        cursor.close();
 	        return lstVendedor;
+	    }*/
+	    public String ConsultarId(String id) {
+	    	String nome=null;
+	    	String[] args = new String[]{id};
+	        //Consulta para trazer todos os dados da tabela vendedor ordenados pela coluna Nome
+	        Cursor cursor = database.query(BaseDAO.TBL_VENDEDOR, colunas,BaseDAO.VENDEDOR_ID + "=?",args, null, null, null);
+	        
+	        if (cursor.getColumnCount()>0) {
+	        	cursor.moveToFirst();
+	        	VendedorVO lVendedorVO = cursorToVendedor(cursor);
+	        	nome=lVendedorVO.getNome();
+	        }
+	         
+	        //Tenha certeza que você fechou o cursor
+	        cursor.close();
+	        return nome;
 	    }
 	    
 	    //Converter o Cursor de dados no objeto POJO VendedorVO
